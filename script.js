@@ -112,7 +112,7 @@ function confirmLogout() {
     const confirmLogout = confirm("Are you sure you want to log out?"); 
     if (confirmLogout) { 
         localStorage.removeItem('isLoggedIn'); 
-        window.location.href = 'Login.html'; 
+        window.location.href = 'login.html'; 
     } 
 } 
 
