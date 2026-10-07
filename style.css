@@ -354,6 +354,7 @@ nav ul li a:hover {
 
 .cyruss-profile img {
     max-height: 82vh;
+    max-width: auto;
     height: auto;
     width: auto;
     display: block;
