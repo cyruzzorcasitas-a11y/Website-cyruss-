@@ -1,0 +1,83 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Gallery - Personal Website</title> 
+    <link rel="stylesheet" href="style.css"> 
+</head> 
+<body> 
+    <!-- 3D Wavy Fluid Canvas Background -->
+    <canvas id="bg-canvas"></canvas>
+
+    <header> 
+        <h1>Welcome to My Personal Website</h1> 
+    </header> 
+
+    <nav> 
+        <ul> 
+            <li><a href="index.html">HOME</a></li> 
+            <li class="dropdown"> 
+                <a href="#" class="dropbtn">ABOUT</a> 
+                <div class="dropdown-content"> 
+                    <a href="skills.html">Skills I'm Developing</a> 
+                    <a href="goals.html">My Goals as a Student</a> 
+                    <a href="funfacts.html">Fun Facts About Me</a> 
+                </div> 
+            </li> 
+  
+            <li><a href="gallery.html">GALLERY</a></li> 
+            <li><a href="contact.html">CONTACT</a></li> 
+            <a href="javascript:void(0);" class="logout-button" onclick="confirmLogout()">LOG OUT</a> 
+        </ul> 
+    </nav> 
+
+    <section id="gallery"> 
+        <h2>Gallery</h2> 
+        <p style="text-align: center;">Check out some of the images from my recent photography:</p> 
+        <div class="gallery"> 
+            <div class="gallery-item"> 
+                <img src="mevs.jpg" alt="Project Image 1" class="thumbnail"> 
+                <p class="image-description">Me,myself and I</p> 
+            </div> 
+            <div class="gallery-item"> 
+                <img src="triovs.jpg" alt="Project Image 2" class="thumbnail"> 
+                <p class="image-description">Grupo Dungol</p> 
+            </div> 
+            <div class="gallery-item"> 
+                <img src="Quadrovs.jpg" alt="Project Image 3" class="thumbnail"> 
+                <p class="image-description">Barkada Quadro</p> 
+            </div> 
+            <div class="gallery-item"> 
+                <img src="Handvs.jpg" alt="Project Image 4" class="thumbnail"> 
+                <p class="image-description">Open cv hand detector</p> 
+            </div> 
+            <div class="gallery-item"> 
+                <img src="Signhandvs.jpg" alt="Project Image 5" class="thumbnail"> 
+                <p class="image-description">Hand Sign Detector</p> 
+            </div> 
+            <div class="gallery-item"> 
+                <img src="Posvs.jpg" alt="Project Image 6" class="thumbnail"> 
+                <p class="image-description">Pos System</p> 
+            </div> 
+        </div> 
+
+        <!-- Lightbox container --> 
+        <div id="lightbox" class="lightbox"> 
+            <span class="close" onclick="closeLightbox()">&times;</span> 
+            <img class="lightbox-content" id="lightboxImage" src=""> 
+            <a class="prev" onclick="changeImage(-1)">&#10094;</a> 
+            <a class="next" onclick="changeImage(1)">&#10095;</a> 
+        </div> 
+    </section> 
+
+    <footer> 
+       
+    </footer> 
+    <div class="footer-divider"></div> 
+
+    <!-- Load Three.js Library & Custom JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="script.js"></script>
+</body> 
+</html>

@@ -1,0 +1,153 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling - Modern Gradient with home page theme */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background: radial-gradient(circle at 50% 30%, #ffffff 0%, #e0f2fe 50%, #001233 100%);
+    background-size: 200% 200%;
+    animation: pulseGradient 12s ease infinite;
+    color: #1e293b;
+    position: relative;
+    overflow: hidden;
+}
+
+@keyframes pulseGradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Glassmorphism / Clean Card Design */
+.form-container {
+    width: 380px;
+    padding: 35px 30px;
+    background: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(10px);
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 18, 51, 0.15), 0 0 1px rgba(0, 150, 255, 0.3);
+    border: 1px solid rgba(0, 168, 232, 0.3);
+    text-align: center;
+    position: relative;
+    z-index: 10;
+    transition: all 0.3s ease;
+}
+
+.form-container h2 {
+    margin-bottom: 24px;
+    color: #001233; /* Deep navy from home banner */
+    font-size: 32px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+/* Label Styling */
+label {
+    display: block;
+    text-align: left;
+    margin: 8px 0 4px;
+    color: #334155;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+/* Input Field Styling */
+input[type="text"], input[type="password"] {
+    width: 100%;
+    padding: 12px 14px;
+    margin-bottom: 12px;
+    border: 1.5px solid #cbd5e1;
+    border-radius: 8px;
+    outline: none;
+    font-size: 15px;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    background: #f8fafc;
+}
+
+input[type="text"]:focus, input[type="password"]:focus {
+    border-color: #00a8e8;
+    background: #ffffff;
+    box-shadow: 0 0 0 3px rgba(0, 168, 232, 0.15);
+}
+
+/* Button Styling matching Home Page Log Out / Action Buttons */
+button {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(135deg, #0077b6, #00a8e8);
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    transition: transform 0.15s ease, box-shadow 0.2s ease, background 0.3s;
+    margin-top: 10px;
+    box-shadow: 0 4px 12px rgba(0, 119, 182, 0.3);
+}
+
+button:hover {
+    background: linear-gradient(135deg, #005f9e, #0096c7);
+    transform: translateY(-1px);
+    box-shadow: 0 6px 16px rgba(0, 119, 182, 0.4);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+/* Show Password Container */
+.show-password {
+    display: flex;
+    align-items: center;
+    margin-top: -4px;
+    margin-bottom: 10px;
+    font-size: 13px;
+    color: #64748b;
+}
+
+.show-password input[type="checkbox"] {
+    margin-right: 8px;
+    cursor: pointer;
+    accent-color: #00a8e8;
+}
+
+.show-password label {
+    margin: 0;
+    font-weight: normal;
+    color: #64748b;
+    cursor: pointer;
+}
+
+/* Error & Match Message Styling */
+#errorMessage, #passwordMatchMessage {
+    margin-top: 8px;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+/* Toggle link styling */
+#toggleText {
+    margin-top: 18px;
+    font-size: 14px;
+    color: #64748b;
+}
+
+#toggleText a {
+    color: #0077b6;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+#toggleText a:hover {
+    text-decoration: underline;
+}

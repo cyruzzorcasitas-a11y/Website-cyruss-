@@ -1,0 +1,115 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Skills I'm Developing</title> 
+    <link rel="stylesheet" href="style.css"> 
+</head> 
+<body> 
+    <!-- 3D Wavy Fluid Canvas Background -->
+    <canvas id="bg-canvas"></canvas>
+
+    <header> 
+        <h1>Welcome to My Personal Website</h1> 
+    </header> 
+  
+    <nav> 
+        <ul> 
+            <li><a href="index.html">HOME</a></li> 
+            <li class="dropdown"> 
+                <a href="#" class="dropbtn">ABOUT</a> 
+                <div class="dropdown-content"> 
+                    <a href="skills.html">Skills I'm Developing</a> 
+                    <a href="goals.html">My Goals as a Student</a> 
+                    <a href="funfacts.html">Fun Facts About Me</a> 
+                </div> 
+            </li> 
+            <li><a href="gallery.html">GALLERY</a></li> 
+            <li><a href="contact.html">CONTACT</a></li> 
+            <a href="javascript:void(0);" class="logout-button" onclick="confirmLogout()">LOG OUT</a> 
+        </ul> 
+    </nav> 
+  
+    <section id="drop"> 
+        <h2>Skills I'm Developing</h2> 
+        <p>As a student, I’m actively developing a diverse set of skills that reflect my passions in technology and beyond.</p> 
+    
+        <div id="skills"> 
+            <div class="tab"> 
+                <button class="tablinks" onclick="openTab(event, 'Communication')">Communication</button> 
+                <button class="tablinks" onclick="openTab(event, 'Programming')">Programming</button> 
+                <button class="tablinks" onclick="openTab(event, 'OpenCV')">OpenCV (Python)</button> 
+                <button class="tablinks" onclick="openTab(event, 'Collaboration')">Collaboration</button> 
+            </div> 
+     
+            <div id="Communication" class="tabcontent"> 
+                <h3>Communication</h3> 
+                <ul> 
+                    <li>Improving spoken English and public speaking confidence.</li> 
+                    <li>Explaining technical ideas clearly to team members.</li> 
+                    <li>Practicing active listening for better project collaboration.</li> 
+                </ul> 
+            </div> 
+     
+            <div id="Programming" class="tabcontent" style="display:none;"> 
+                <h3>Programming</h3> 
+                <ul> 
+                    <li>Writing structured logic in Python, VB.NET, and C++.</li> 
+                    <li>Working with relational databases like MySQL.</li> 
+                    <li>Solving problems through clean, efficient code.</li> 
+                </ul> 
+            </div> 
+  
+            <div id="OpenCV" class="tabcontent" style="display:none;"> 
+                <h3>OpenCV (Python)</h3> 
+                <ul> 
+                    <li>Processing images and live camera feeds in real time.</li> 
+                    <li>Integrating MediaPipe for face and pose detection.</li> 
+                    <li>Building computer vision for sign detector.</li> 
+                </ul> 
+            </div> 
+  
+            <div id="Collaboration" class="tabcontent" style="display:none;"> 
+                <h3>Collaboration</h3> 
+                <ul> 
+                    <li>Working effectively in team-based software and group projects.</li> 
+                    <li>Sharing ideas constructively and supporting team members.</li> 
+                    <li>Adapting to different roles to achieve shared project goals.</li>  
+                </ul> 
+            </div> 
+        </div> 
+    </section> 
+  
+    <footer> 
+       
+    </footer> 
+    <div class="footer-divider"></div> 
+  
+    <script> 
+    function openTab(evt, tabName) { 
+        const tabcontents = document.getElementsByClassName("tabcontent"); 
+        for (let i = 0; i < tabcontents.length; i++) { 
+            tabcontents[i].style.display = "none"; 
+        } 
+      
+        const tablinks = document.getElementsByClassName("tablinks"); 
+        for (let i = 0; i < tablinks.length; i++) { 
+            tablinks[i].classList.remove("active"); 
+        } 
+      
+        document.getElementById(tabName).style.display = "block"; 
+        evt.currentTarget.classList.add("active"); 
+    } 
+      
+    document.addEventListener("DOMContentLoaded", function() { 
+        const firstTab = document.querySelector('.tablinks');
+        if (firstTab) firstTab.click(); 
+    }); 
+    </script> 
+
+    <!-- Load Three.js Library & Custom JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="script.js"></script>
+</body> 
+</html>

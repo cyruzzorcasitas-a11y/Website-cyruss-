@@ -1,0 +1,121 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Contact - Personal Website</title> 
+    <link rel="stylesheet" href="style.css"> 
+</head> 
+<body class="contact-background"> 
+    <!-- 3D Wavy Fluid Canvas Background -->
+    <canvas id="bg-canvas"></canvas>
+
+    <header> 
+        <h1>Welcome to My Personal Website</h1> 
+    </header> 
+  
+    <nav> 
+        <ul> 
+            <li><a href="index.html">HOME</a></li> 
+            <li class="dropdown"> 
+                <a href="#" class="dropbtn">ABOUT</a> 
+                <div class="dropdown-content"> 
+                    <a href="skills.html">Skills I'm Developing</a> 
+                    <a href="goals.html">My Goals as a Student</a> 
+                    <a href="funfacts.html">Fun Facts About Me</a> 
+                </div> 
+            </li> 
+  
+            <li><a href="gallery.html">GALLERY</a></li> 
+            <li><a href="contact.html">CONTACT</a></li> 
+            <a href="javascript:void(0);" class="logout-button" onclick="confirmLogout()">LOG OUT</a> 
+        </ul> 
+    </nav> 
+
+    <section id="contact"> 
+        <div class="contact-content"> 
+            <!-- Contact Form --> 
+            <form id="contactForm" class="contact-form"> 
+                <h2>Let's <span>Get in Touch</span></h2> 
+                
+                <label for="name">Your Name:</label> 
+                <input type="text" id="name" name="name" placeholder="Your Name"> 
+                <span class="error" id="nameError"></span> 
+     
+                <label for="email">Email:</label> 
+                <input type="email" id="email" name="email" placeholder="Your Email"> 
+                <span class="error" id="emailError"></span> 
+     
+                <label for="message">Message:</label> 
+                <textarea id="message" name="message" rows="4" placeholder="Your Message"></textarea> 
+                <span class="error" id="messageError"></span> 
+     
+                <button type="submit">SEND MESSAGE</button> 
+            </form> 
+     
+            <!-- Contact Details --> 
+            <div class="contact-details"> 
+                <h3>Contact Me</h3> 
+                <p><strong>Email Address</strong><br>cyruzzorcasitas@gmail.com</p> 
+                <hr> 
+                <p><strong>Phone Number</strong><br>0981 4857 677</p> 
+                <hr> 
+                <p><strong>Address</strong><br>Culasi, Antique, Philippines</p> 
+            </div> 
+        </div> 
+    </section> 
+     
+    <footer> 
+        <p>&copy; 2026 Cyruss Jhon Orcasitas. All rights reserved.</p> 
+    </footer> 
+    <div class="footer-divider"></div> 
+
+    <script> 
+    const form = document.querySelector("#contactForm"); 
+    const nameInput = document.querySelector("#name"); 
+    const emailInput = document.querySelector("#email"); 
+    const messageInput = document.querySelector("#message"); 
+      
+    form.addEventListener("submit", function(event) { 
+        event.preventDefault();
+        let isValid = true; 
+      
+        document.querySelectorAll(".error").forEach(function(errorElement) { 
+            errorElement.textContent = ""; 
+        }); 
+      
+        if (nameInput.value.trim() === "") { 
+            document.getElementById('nameError').textContent = "Name is required"; 
+            isValid = false; 
+        } 
+      
+        if (emailInput.value.trim() === "") { 
+            document.getElementById('emailError').textContent = "Email is required"; 
+            isValid = false; 
+        } else if (!validateEmail(emailInput.value)) { 
+            document.getElementById('emailError').textContent = "Please enter a valid email"; 
+            isValid = false; 
+        } 
+      
+        if (messageInput.value.trim() === "") { 
+            document.getElementById('messageError').textContent = "Message is required"; 
+            isValid = false; 
+        } 
+      
+        if (isValid) {
+            alert("Your message has been sent successfully!"); 
+            form.reset();
+        }
+    }); 
+      
+    function validateEmail(email) { 
+        const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; 
+        return re.test(String(email).toLowerCase()); 
+    } 
+    </script> 
+
+    <!-- Load Three.js Library & Custom JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="script.js"></script>
+</body> 
+</html>

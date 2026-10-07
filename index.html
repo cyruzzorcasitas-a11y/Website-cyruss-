@@ -1,0 +1,157 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Home - Personal Website</title> 
+    <link rel="stylesheet" href="style.css"> 
+</head> 
+<body> 
+    <!-- 3D Wavy Fluid Canvas Background -->
+    <canvas id="bg-canvas"></canvas>
+
+    <header> 
+        <h1>Welcome to My Personal Website</h1> 
+    </header> 
+  
+    <nav> 
+        <ul> 
+            <li><a href="index.html">HOME</a></li> 
+            <li class="dropdown"> 
+                <a href="#" class="dropbtn">ABOUT</a> 
+                <div class="dropdown-content"> 
+                    <a href="skills.html">Skills I'm Developing</a> 
+                    <a href="goals.html">My Goals as a Student</a> 
+                    <a href="funfacts.html">Fun Facts About Me</a> 
+                </div> 
+            </li> 
+  
+            <li><a href="gallery.html">GALLERY</a></li> 
+            <li><a href="contact.html">CONTACT</a></li> 
+            <a href="javascript:void(0);" class="logout-button" onclick="confirmLogout()">LOG OUT</a> 
+        </ul> 
+    </nav> 
+
+    <div class="slider"> 
+        <div class="slides"> 
+            <!-- Slide 1: Interactive Floating 3D Cubes -->
+            <div class="slide"> 
+                <canvas id="slide-canvas-1" class="slide-canvas"></canvas> 
+                <div class="text-overlay"><h1> Welcome to my Website! </h1></div> 
+            </div> 
+            <!-- Slide 2: Dynamic Digital Network -->
+            <div class="slide"> 
+                <canvas id="slide-canvas-2" class="slide-canvas"></canvas> 
+                <div class="text-overlay"><h1> Driven by Technology & Design </h1></div> 
+            </div> 
+            <!-- Slide 3: Flowing Cyber Wave Grid -->
+            <div class="slide"> 
+                <canvas id="slide-canvas-3" class="slide-canvas"></canvas> 
+                <div class="text-overlay"><h1> Bringing ideas to Life. </h1></div> 
+            </div> 
+        </div> 
+
+        <!-- Slider Controls -->
+        <a class="slider-prev" onclick="changeSlide(-1)">&#10094;</a>
+        <a class="slider-next" onclick="changeSlide(1)">&#10095;</a>
+    </div>
+
+    <section class="cyruss-hero">
+        <!-- Moving background name -->
+        <div class="cyruss-name-bg">
+            CYRUSS JHON ORCASITAS
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            CYRUSS JHON ORCASITAS
+        </div>
+
+        <!-- Hero Wrapper for Hover Effects -->
+        <div class="cyruss-hero-container">
+            <!-- Profile picture -->
+            <div class="cyruss-profile">
+                <img src="Cyruzzweb.png" alt="Cyruss Jhon Orcasitas"> 
+            </div> 
+
+            <!-- Revealed Content on Hover -->
+            <div class="cyruzz-intro"> 
+                <h1>Hi! I'M Cyruss Jhon Orcasitas</h1> 
+                <p>
+                    I'm an Information Technology student diving into various areas of programming,
+                    building cool projects, and expanding my skills and committed to continuous learning!
+                </p> 
+                <blockquote class="hero-quote">
+                    "Appreciate everything, expect nothing"
+                </blockquote>
+            </div>
+        </div>
+    </section>
+
+    <!-- Fun Facts Section -->
+    <section id="drop"> 
+        <h2>Fun Facts About Me</h2> 
+        <p>Welcome to my Fun Facts About Me! Here, you'll get a glimpse into my passions, interests, and the little quirks that make me who I am. </p> 
+
+        <div class="funfact-container"> 
+            <div class="funfact-card"> 
+                <div class="funfact-inner"> 
+                    <div class="funfact-front"> 
+                        <p>Dual Screen!</p> 
+                    </div> 
+                    <div class="funfact-back"> 
+                        <p>Code on the left, Facebook on the right.</p> 
+                    </div> 
+                </div> 
+            </div> 
+            <div class="funfact-card"> 
+                <div class="funfact-inner"> 
+                    <div class="funfact-front"> 
+                        <p>Just One More Game!</p> 
+                    </div> 
+                    <div class="funfact-back"> 
+                        <p>One more game means three more hours.</p> 
+                    </div> 
+                </div> 
+            </div> 
+            <div class="funfact-card"> 
+                <div class="funfact-inner"> 
+                    <div class="funfact-front"> 
+                        <p>AI Partner! </p> 
+                    </div> 
+                    <div class="funfact-back"> 
+                        <p>I let ai fix my broken coding logic.</p> 
+                    </div> 
+                </div> 
+            </div> 
+            <div class="funfact-card"> 
+                <div class="funfact-inner"> 
+                    <div class="funfact-front"> 
+                        <p>Intro Guitar King! </p> 
+                    </div> 
+                    <div class="funfact-back"> 
+                        <p>I learn the coolest intro of the song and move to the next one.</p> 
+                    </div> 
+                </div> 
+            </div> 
+        </div> 
+
+        <!-- See More Button --> 
+        <div class="see-more-container"> 
+            <a href="funfacts.html" class="see-more-button">See More Funfacts</a> 
+        </div> 
+    </section> 
+
+    <footer> 
+        <!-- Footer content -->
+    </footer> 
+    <div class="footer-divider"></div> 
+
+    <!-- Lightbox Container --> 
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()"> 
+        <span class="close" onclick="event.stopPropagation(); closeLightbox()">&times;</span> 
+        <img class="lightbox-content" id="lightboxImage" src=""> 
+    </div> 
+
+    <!-- Load Three.js Library & Custom JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="script.js"></script>
+</body> 
+</html>
